@@ -9,18 +9,13 @@
       INPUT : {3,4,5,9,2}
       OUTPUT: {2,9,5,4,3}
 */
-
-
 class Solution {
     public void rotate(int[] nums, int k) {
         for(int i=0;i<nums.length;i++)
-        {
-           for(int j=i+1;j<nums.length;j++)
-           {
+           for(int j=i+1;j<nums.length;j++){
                int temp=nums[i];
                nums[i]=nums[j];
                nums[j]=temp;
            }
-        }
     }
 }
