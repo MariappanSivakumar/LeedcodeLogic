@@ -4,12 +4,13 @@
      */
 class Solution {
     public void rotate(int[] nums, int k) {
-       for(int incre=-1;incre<k;incre++)
-       {
-           int temp=nums[0];
-           for(int i=0;i<nums.length-1;i++)
-               nums[i]=nums[i+1];
-           nums[nums.length-1]=temp;
-       }
+        while(k!=0)
+        {
+            int first=nums[nums.length-1];
+            for(int j=nums.length-1;j>0;j--)
+                nums[j]=nums[j-1];
+            nums[0]=first;
+            k--;
+        }
     }
 }
